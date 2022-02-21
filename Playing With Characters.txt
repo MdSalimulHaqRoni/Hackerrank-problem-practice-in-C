@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    char c, *s, *sen;
+    s=(char*)malloc(sizeof(char*)*1024);
+    sen=(char*)malloc(sizeof(char*)*1024);
+    
+    scanf("%c%s\n%[^\n]s", &c,s,sen);
+    
+    s=realloc(s, strlen(s));
+    sen=realloc(sen, strlen(sen));
+    
+    printf("%c\n%s\n%s", c,s,sen);
+    
+    return 0;
+}
